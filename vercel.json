@@ -1,26 +1,25 @@
 {
-    "version": 2,
-    "rewrites": [
-      {
-        "source": "/api/:path*",  
-        "destination": "https://online-voting-platform-n1wd.vercel.app/api/:path*"  
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://online-voting-platform-n1wd.vercel.app/api/:path*"
+    }
+  ],
+  "env": {
+    "API_URL": "https://online-voting-platform-n1wd.vercel.app"
+  },
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "frontend/build" 
       }
-    ],
-    "env": {
-      "API_URL": "https://online-voting-platform-n1wd.vercel.app"  
     },
-    "builds": [
-      {
-        "src": "frontend/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "frontend/build"
-        }
-      },
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }
-    ]
-  }
-  
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ]
+}
