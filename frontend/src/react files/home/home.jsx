@@ -11,7 +11,7 @@ const HomePage = () => {
   const [role, setRole] = useState('');
   const [isVerified, setIsVerified] = useState('');
   const [profileImage, setProfileImage] = useState(''); // State to hold the profile image URL
-  const [uploadStatus, setUploadStatus] = useState(''); // For displaying upload status
+  // const [uploadStatus, setUploadStatus] = useState(''); // For displaying upload status
   const [loading, setLoading] = useState(false); // Loading state
   const [userid, setUserid] = useState('');
 
@@ -58,15 +58,15 @@ const HomePage = () => {
         });
 
         setProfileImage(response.data.url); // Set the uploaded image URL
-        setUploadStatus('Profile image uploaded successfully!');
+        // setUploadStatus('Profile image uploaded successfully!');
       } catch (error) {
         console.error('Error uploading file:', error);
-        setUploadStatus('Failed to upload profile image.');
+        // setUploadStatus('Failed to upload profile image.');
       } finally {
         setLoading(false); // Set loading to false when the upload ends
       }
     } else {
-      setUploadStatus('Please select a valid image file.');
+      // setUploadStatus('Please select a valid image file.');
     }
   };
 

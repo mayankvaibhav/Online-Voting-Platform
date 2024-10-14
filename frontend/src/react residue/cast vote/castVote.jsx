@@ -9,7 +9,7 @@ const CastVote = () => {
     const [error, setError] = useState(null); // Error state
     const [userId, setUserId] = useState("");
     const [token, setToken] = useState('');
-    const [displayData, setDisplayData] = useState('');
+    // const [displayData, setDisplayData] = useState('');
 
     // Fetch all elections and their candidates dynamically
     useEffect(() => {
@@ -78,7 +78,7 @@ const CastVote = () => {
 
     const handleClick = async (event) => {
         const data = event.target.getAttribute('data-info');
-        setDisplayData(data); // Update the state to display the data
+        // setDisplayData(data); // Update the state to display the data
 
         const cleanedData = data.replace(/[\[\]]/g, '');
         const array = cleanedData.split(',').map(item => item.trim());

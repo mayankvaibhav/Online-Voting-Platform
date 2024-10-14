@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import landingStyles from "./landing.module.css";
 import image from "./image.png"; // Ensure the correct path to your image
