@@ -1,0 +1,92 @@
+.container{
+    background-color: aquamarine;
+    border-radius: 50px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+.parentContainer{
+    margin: 50px;
+    border-radius: 30px;
+    font-size: x-large;
+    background-color: antiquewhite;
+    width: fit-content;
+}
+.electionTitle{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}  
+
+.createdStart{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.createdPrivate{
+    margin-left: 70px;
+}
+.time{
+    margin-left: 100px;
+    margin-right: 70px;
+}
+
+.seperatorContainer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+.seperator{
+    background-color: blue;
+    width: 35rem;
+    height: 8px;
+    border-radius: 20px;
+}
+
+.registeredCandidatesContainer{
+    margin-top: 10px;
+}
+.registeredCandidatesContainer span{
+    display: flex;
+    justify-content: center;
+}
+.registeredCandidate{
+    display: flex;
+    justify-content: space-around;
+}
+
+.candidate{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.c1 .profile{
+    margin-left: 90px;
+    margin-right: 90px;
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.deleteElection{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.deleteElection button{
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+}
+
+.nothing{
+    height: 1px;
+    width: 1px;
+}

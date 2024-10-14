@@ -1,0 +1,252 @@
+.homeBody {
+    margin: -8px;
+    height: 100vh;
+    background-color: white;
+}
+
+.container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    height: 47rem;
+    display: flex;
+}
+
+.profile {
+    display: block;
+    background-color: #EDE8F5;
+    width: 350px;
+}
+
+.pageTitle {
+    background-color: #3252c8;
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.ypd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.profileImageContainer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileImage {
+    box-shadow: 1px 1px 20px 1px gray;
+    height: 10rem;
+    width: 10rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-size: cover; /* Cover the container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+}
+.profileImgeFit{
+    width: 300px; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+    overflow: hidden; /* Hide any overflow */
+    position: relative;
+}
+
+.usernameContainer {
+    height: fit-content;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.username {
+    font-size: x-large;
+    width: fit-content;
+}
+
+.emailContainer {
+    height: fit-content;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: x-large;
+    width: fit-content;
+}
+
+.roleContainer {
+    height: fit-content;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.role {
+    font-size: x-large;
+    width: fit-content;
+}
+
+.verifyContainer {
+    height: fit-content;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verify {
+    font-size: x-large;
+    width: fit-content;
+}
+
+.middle {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.quote {
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: #3252c8;
+}
+
+.quote h1 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.activeElection {
+    border: 5px solid black;
+    border-radius: 10px;
+    height: 315px;
+    margin-top: 10px;
+    background-color: #EDE8F5;
+    background-size: cover; 
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    
+}
+
+.OE {
+    margin-left: 20px;
+    font-size: xx-large;
+}
+
+.electionBox {
+    margin-left: 10px;
+    width: fit-content;
+    margin-top: 20px;
+    background-color: #ADBBDA;
+    border-radius: 15px 15px 0 0;
+}
+
+.electionTitleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.electionTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    font-size: larger;
+}
+
+.candidateVsContainer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.candidate {
+    border-radius: 25px;
+    background-color: #8697C4;
+    border: 2px solid black;
+    height: 10rem;
+    width: 10rem;
+}
+
+.vs {
+    background-color: aquamarine;
+    border: 2px solid black;
+    height: 10rem;
+    width: 7rem;
+}
+
+.seperatorDesign {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seperatorDesignBox {
+    border-radius: 10px;
+    background-color: #3252c8;
+    height: 5px;
+    width: 20rem;
+}
+
+.createdTimerContainer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right {
+    border-radius: 15px 15px 0 0;
+    height: 47rem;
+    background-color: #EDE8F5;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px 1px gray;
+    font-size: large;
+    margin-top: 20px;
+    height: 50px;
+    width: 300px;
+    border: 2px solid #4b536c;
+    border-radius: 15px;
+    background-color: #8697C4;
+}
+
+.rightHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    color: white;
+    height: 50px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 15px 15px 0 0;
+    background-color: #3252c8;
+}

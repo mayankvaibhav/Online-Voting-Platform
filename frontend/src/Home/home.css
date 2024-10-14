@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.left {
+    height: 47rem;
+    display: flex;
+}
+.profile {
+    display: block;
+    background-color: aqua;
+    width: 350px;
+}
+.pageTitle {
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.ypd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.profileImageContainer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileImage {
+    height: 10rem;
+    width: 10rem;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.usernameContainer {
+    height: fit-content;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.username {
+    font-size: xx-large;
+    border: 2px solid black;
+    width: fit-content;
+}
+.emailContainer{
+    height: fit-content;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email{
+    font-size: 25px;
+    border: 2px solid black;
+    width: fit-content;   
+}
+.roleContainer{
+    height: fit-content;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.role{
+    font-size: xx-large;
+    border: 2px solid black;
+    width: fit-content; 
+}
+.verifyContainer{
+    height: fit-content;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.verify{
+    font-size: xx-large;
+    border: 2px solid black;
+    width: fit-content; 
+}
+
+
+
+.middle{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color:aquamarine;
+}
+.quote{
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: beige;
+}
+
+
+
+
+
+.right {
+    height: 47rem;
+    background-color: antiquewhite;
+}
+.boxes {
+    margin-top: 50px;
+    height: 50px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: aquamarine;
+}
+
+.right-header {
+    margin-top: 20px;
+    height: 50px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: aquamarine;
+}

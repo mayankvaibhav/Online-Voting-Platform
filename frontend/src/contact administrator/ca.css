@@ -1,0 +1,114 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:aquamarine;
+    border-radius: 20px;
+}
+.website-content{
+    margin-left: 30px;
+    height: 50px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.navigation-links{
+    margin-right: 30px;
+    height: 50px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.banners{
+    
+    border-radius: 20px;
+    background-color: aqua;
+    height: 15rem;
+    margin-top: 10px;
+}
+.container1{
+    display: flex;
+    margin-top: 10px;
+    background-color: blueviolet;
+    height: 350px;
+    border-radius: 20px;
+    padding: 20px;
+  
+    
+}
+.content{
+    margin-top: 20px;
+    height: 100px;
+    width: 900px;
+    margin-left: 70px;
+    
+
+}
+.img img{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 250px;
+    width: 350px;
+  
+}
+.suggestion{
+    margin-top: 10px;
+    background-color: magenta;
+    height: 275px;
+    border-radius: 20px;
+}
+.contact{
+    height: 100px;
+    display: flex;
+    background-color: aqua;
+    margin-top: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    
+    
+}
+.email{
+    background-color: red;
+  
+   margin: 15px;
+   margin-left: 100px;
+   height: 75px;
+   width: 75px;
+
+}
+.linkedin{
+background-color: rgb(135, 235, 235);
+margin: 15px;
+margin-left: 100px;
+height: 75px;
+width: 75px;
+
+}
+.facebook{
+    background-color: blue;
+    margin: 15px;
+    margin-left: 100px;
+    height: 75px;
+    width: 75px;
+
+}
+.instagram{
+    background-color: magenta;
+    margin: 15px;
+    margin-left: 100px;
+    height: 75px;
+    width: 75px;
+
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: cadetblue;
+    border-radius: 20px;
+    margin-top: 20px;
+    height: 50px;
+}

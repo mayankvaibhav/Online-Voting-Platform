@@ -1,0 +1,185 @@
+.allElectionBody{
+    margin-top: -7px;
+    margin-left: -3px;
+    margin-right: -3px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#3D52A0;
+    color: white;
+}
+.website-content{
+    margin-left: 30px;
+    height: 50px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.navigation-links{
+    margin-right: 30px;
+    height: 50px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.banners{
+    background-color: aqua;
+    height: 15rem;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+
+
+
+.elections-list-container{
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #ede8f5;
+    color: #092690;
+    height: fit-content;
+    border: 2px solid black;
+}
+.election-box{
+    box-shadow: 2px 2px 25px 2px gray;
+    color: white;
+    margin-left: 20px;
+    border-radius: 20px 20px 0 0;
+    width: fit-content;
+    margin-top: 20px;
+    background-color: #7091e6;
+    border: 2px solid #3660c9;
+}
+
+
+
+.seperator-design{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seperator-design-box{
+    border-radius: 10px;
+    background-color: blue;
+    height: 5px;
+    width: 15rem;
+}
+.created-timer-container{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+
+
+
+.PE{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: x-large;
+    margin-left: 25px;
+}
+
+
+
+
+
+.election-boxes-container{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.election-box-container{
+    box-shadow: 2px 2px 25px 2px gray;
+    background-color: #7091e6;
+    color: white;
+    border: 2px solid #3660c9;
+    width: fit-content;
+    border-radius: 20px 20px 0px 0px;
+}
+.election-title-container{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.election-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    font-size: larger;
+}
+.candidate-vs-container{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.candidate{
+    border-radius: 25px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    height: 10rem;
+    width: 10rem;
+}
+.candidate-name{
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vs{
+    background-color: aquamarine;
+    border: 2px solid black;
+    height: 10rem;
+    width: 7rem;
+}
+.vote-decision-container{
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid #3660c9;
+    justify-content: space-around;
+}
+.vote-count-container{
+    display: flex;
+}
+.vote-count{
+margin-left: 15px;
+}
+.seeBioContainer{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+.seeBioContainer button{
+    border: 2px solid rgb(7, 7, 94);
+    height: fit-content;
+    width: 20rem;
+    color: white;
+    background-color: #3660c9;
+    border-radius: 5px;
+}
+
+
+
+.seperator-design-box{
+    border-radius: 10px;
+    background-color: blue;
+    height: 5px;
+    width: 15rem;
+}
+
+.created-by{
+    display: flex;
+    align-items: center;
+}

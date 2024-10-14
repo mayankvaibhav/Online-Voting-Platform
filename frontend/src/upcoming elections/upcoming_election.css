@@ -1,0 +1,91 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:aquamarine;
+    border-radius: 20px;
+}
+.website-content{
+    margin-left: 30px;
+    height: 50px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.navigation-links{
+    margin-right: 30px;
+    height: 50px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.banners{
+    
+    border-radius: 20px;
+    background-color: aqua;
+    height: 15rem;
+    margin-top: 10px;
+}
+
+.election-container{
+    background-color: aqua;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+.nothing{
+    height: 1px;
+    width: 1px;
+}
+.election-content{
+    /* background-color: aquamarine; */
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.election-title{
+    margin-top: -10px;
+    display: flex;
+    font-size: x-large;
+    justify-content: center;
+}
+.electionId{
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.created-start-end-container{
+    border: 2px solid black;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.description{
+    margin-top: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.description span{
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+}
+.description p{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+.request-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+

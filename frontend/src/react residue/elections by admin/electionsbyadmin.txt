@@ -1,0 +1,192 @@
+import React, { useEffect, useState } from 'react';
+import electionsByAdmin from './electionsByAdmin.module.css'; // Importing the CSS module
+import { jwtDecode } from 'jwt-decode';
+
+import axios from 'axios';
+
+
+
+const ElectionCreatedRegistered = () => {
+    const [elections, setElections] = useState([]); // State to hold elections
+    const [uniqueElectionIds, setUniqueElectionIds] = useState([]); // State to hold unique election IDs
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    // console.log(`unique ids ${uniqueElectionIds}`)
+
+    // console.log(`elections ${elections}`)
+
+
+
+    // Function to fetch elections by the user using fetch
+    const fetchElections = async () => {
+        const token = localStorage.getItem('token'); // Retrieve the token from local storage
+        // console.log(token);
+
+        if (!token) {
+            throw new Error('No token found in local storage');
+        }
+
+        try {
+            // Decode the JWT to extract the user ID
+            const decodedToken = jwtDecode(token);
+            const userId = decodedToken.id; // Assuming the JWT contains 'id' field for user ID
+            // console.log('User ID:', userId);
+
+            // Fetch the elections created by the user
+            const response = await fetch(`http://localhost:8000/elections/${userId}`, {
+                method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json(); // Parse the JSON response
+
+            // Extract unique election IDs
+            const uniqueIds = [...new Set(data.map(election => election._id))]; // Use Set to keep only unique IDs
+            setElections(data); // Set the full elections data
+            setUniqueElectionIds(uniqueIds); // Set only the unique IDs
+
+            return data; // Return the fetched elections
+        } catch (error) {
+            console.error('Error fetching elections:', error);
+            throw error; // Propagate the error
+        } finally {
+            setLoading(false); // Set loading to false once the fetching is done
+        }
+    };
+
+    // You can trigger this fetchElections in a useEffect to fetch data when the component mounts
+    useEffect(() => {
+        fetchElections().catch(setError); // Set error if there's any
+    }, []);
+
+
+
+
+    const getCandidatesByElectionIds = async (electionIds) => {
+        try {
+            const promises = electionIds.map(async (electionId) => {
+                const response = await axios.get(`http://localhost:8000/candidate/${electionId}`);
+                return { electionId, candidates: response.data }
+            });
+
+
+            const results = await Promise.all(promises);
+            return results;
+        } catch (error) {
+            console.error('Error fetching candidates:', error);
+            throw new Error(error.response?.data?.message || 'Error fetching candidates');
+        }
+    };
+
+    // // Example usage:
+    // const electionIdsArray = ['electionId1', 'electionId2', 'electionId3'];
+
+    // Global object to store candidate data by election ID
+    const globalCandidateData = {};
+
+    // Function to get candidates and store in global object
+    getCandidatesByElectionIds(uniqueElectionIds)
+        .then((candidatesData) => {
+            candidatesData.forEach(({ electionId, candidates }) => {
+                // Store candidates data in the global object
+                globalCandidateData[electionId] = candidates.length > 0 ? candidates : 'No candidates found';
+            });
+            // console.log('All candidate data stored in global object:', globalCandidateData);
+        })
+        .catch((error) => {
+            console.error('Error:', error.message);
+        });
+
+        console.log(`this is global one`, globalCandidateData)
+
+
+    useEffect(() => {
+        const getElections = async () => {
+            try {
+                const data = await fetchElections(); // Fetch elections
+                setElections(data);
+            } catch (err) {
+                setError('Failed to fetch elections');
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        getElections(); // Call the async function to fetch elections
+    }, []);
+
+    // Loading and error states
+    if (loading) return <div>Loading elections...</div>;
+    const message = "No elections found for this user"
+    if (error) return <div>{message}</div>;
+
+    // console.log(elections)
+
+    return (
+        <div className={electionsByAdmin.electionCreatedByAdminBody}>
+            {elections.map((election) => (
+                <div key={election._id} className={electionsByAdmin.container}>
+                    <div className={electionsByAdmin.parentContainer}>
+                        <div className={electionsByAdmin.nothing}></div>
+                        <div className={electionsByAdmin.electionTitle}>
+                            <span>{election.electionName}</span> {/* Display election name */}
+                        </div>
+                        <div className={electionsByAdmin.createdStart}>
+                            <div className={electionsByAdmin.createdPrivate}>
+                                <div className={electionsByAdmin.createdAt}>
+                                    <time dateTime={election.createdAt}>
+                                        <span>Created at: {new Date(election.createdAt).toLocaleDateString()} | {new Date(election.createdAt).toLocaleTimeString()}</span>
+                                    </time>
+                                </div>
+                                <div className={electionsByAdmin.isPrivate}>
+                                    <span>{election.isPrivate ? 'Private' : 'Public'}</span>
+                                </div>
+                            </div>
+                            <div className={electionsByAdmin.time}>
+                                <div className={electionsByAdmin.startTime}>
+                                    <span>Start time: {new Date(election.startTime).toLocaleDateString()} | {new Date(election.startTime).toLocaleTimeString()}</span>
+                                </div>
+                                <div className={electionsByAdmin.endTime}>
+                                    <span>End time: {new Date(election.endTime).toLocaleDateString()} | {new Date(election.endTime).toLocaleTimeString()}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={electionsByAdmin.seperatorContainer}>
+                            <div className={electionsByAdmin.seperator}></div>
+                        </div>
+                        <div className={electionsByAdmin.registeredCandidatesContainer}>
+                            <span>Registered Candidates for this election</span>
+                            <div className={electionsByAdmin.registeredCandidate}>
+                                {election.candidates && election.candidates.length > 0 ? ( // Check if candidates exist
+                                    election.candidates.map((candidate) => (
+                                        <div key={candidate._id} className={electionsByAdmin.candidate}>
+                                            <div className={electionsByAdmin.c1}>
+                                                <div className={electionsByAdmin.profile}></div>
+                                                <span>{candidate.name}</span> {/* Candidate name */}
+                                            </div>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <p>No registered candidates for this election.</p> // Handle no candidates
+                                )}
+                            </div>
+                        </div>
+                        <div className={electionsByAdmin.deleteElection}>
+                            <button type="button" aria-label="Delete Election">Delete Election</button>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+};
+
+export default ElectionCreatedRegistered;

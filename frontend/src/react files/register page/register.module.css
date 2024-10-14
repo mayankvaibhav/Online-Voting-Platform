@@ -1,0 +1,209 @@
+.RegisterPage {
+    margin: -8px;
+    height: 100vh;
+    background: linear-gradient(to bottom right,
+            /* #3D52A0,  */
+            /* #7091E6,  */
+            #16255b,
+            #16255b,
+            #1d2d66,
+            #1d2d66,
+            #283a7a);
+    /* Smooth gradient starting from the top left corner to the bottom right */
+}
+
+.ParentContainer {
+    display: flex;
+}
+
+.FormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28rem;
+    height: 49rem;
+    background-color: #3D52A0;
+    border-radius: 30px;
+}
+
+.ContentContainer {
+    margin-left: 30px;
+    position: relative;
+    display: flex;
+}
+
+.SloganParagraph {
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 120px;
+    width: 30rem;
+}
+
+.Slogan {
+    font-size: x-large;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.Paragraph p {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: white;
+}
+
+.Image {
+    margin-top: 5rem;
+    margin-left: 27rem;
+    position: absolute;
+}
+
+.Image img {
+    height: 40rem;
+    width: fit-content;
+}
+
+.Nothing {
+    height: 1px;
+    width: 1px;
+}
+
+/* From Uiverse.io by ammarsaa */
+.Form {
+    border: 2px solid rgb(0, 0, 255);
+    box-shadow: 2px 2px 25px 10px blue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    align-items: center;
+}
+
+.Title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
+}
+
+.Title::before {
+    width: 18px;
+    height: 18px;
+}
+
+.Title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.Title::before,
+.Title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #00bfff;
+}
+
+.Message,
+.Signin {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.Signin {
+    text-align: center;
+}
+
+.Signin a:hover {
+    text-decoration: underline royalblue;
+}
+
+.Signin a {
+    color: #00bfff;
+}
+
+.Flex {
+    display: flex;
+    width: 350px;
+}
+
+.Form label {
+    position: relative;
+}
+
+.Form label .Input {
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    padding: 15px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.Form label .Input + span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.Form label .Input:placeholder-shown + span {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+
+.Form label .Input:focus + span,
+.Form label .Input:valid + span {
+    color: #00bfff;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.Input {
+    font-size: medium;
+}
+
+.Submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: #00bfff;
+}
+
+.Submit:hover {
+    background-color: #00bfff96;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}

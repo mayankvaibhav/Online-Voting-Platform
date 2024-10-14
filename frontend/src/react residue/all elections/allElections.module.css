@@ -1,0 +1,175 @@
+.allElectionBody{
+    margin-top: -7px;
+    margin-left: -3px;
+    margin-right: -3px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#3D52A0;
+    color: white;
+}
+.websiteContent{
+    margin-left: 30px;
+    height: 50px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.navigationLinks{
+    margin-right: 30px;
+    height: 50px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.banners{
+    background-color: aqua;
+    height: 15rem;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.electionsListContainer{
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #ede8f5;
+    color: #092690;
+    height: fit-content;
+    border: 2px solid black;
+}
+.electionBox{
+    box-shadow: 2px 2px 25px 2px gray;
+    color: white;
+    margin-left: 20px;
+    border-radius: 20px 20px 0 0;
+    width: fit-content;
+    margin-top: 20px;
+    background-color: #7091e6;
+    border: 2px solid #3660c9;
+}
+
+.seperatorDesign{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seperatorDesignBox{
+    border-radius: 10px;
+    background-color: blue;
+    height: 5px;
+    width: 15rem;
+}
+.createdTimerContainer{
+    margin-top: 5px;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* border: 2px solid black; */
+}
+
+.PE{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: x-large;
+    margin-left: 25px;
+}
+
+.electionBoxesContainer{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.electionBoxContainer{
+    box-shadow: 2px 2px 25px 2px gray;
+    background-color: #7091e6;
+    color: white;
+    border: 2px solid #3660c9;
+    width: fit-content;
+    border-radius: 20px 20px 0px 0px;
+}
+.electionTitleContainer{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.electionTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    font-size: larger;
+}
+.candidateVsContainer{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.candidate{
+    border-radius: 25px;
+    /* background-color: aquamarine; */
+    border: 2px solid black;
+    height: 10rem;
+    width: 10rem;
+    background-size: cover; /* Cover the container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+}
+.candidateName{
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vs{
+    background-color: aquamarine;
+    border: 2px solid black;
+    height: 10rem;
+    width: 7rem;
+}
+.voteDecisionContainer{
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid #3660c9;
+    justify-content: space-around;
+}
+.voteCountContainer{
+    display: flex;
+}
+.voteCount{
+    margin-left: 15px;
+}
+.seeBioContainer{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+.seeBioContainer button{
+    border: 2px solid rgb(7, 7, 94);
+    height: fit-content;
+    width: 20rem;
+    color: white;
+    background-color: #3660c9;
+    border-radius: 5px;
+}
+
+.seperatorDesignBox{
+    border-radius: 10px;
+    background-color: blue;
+    height: 5px;
+    width: 15rem;
+}
+
+.createdBy{
+    display: flex;
+    align-items: center;
+}

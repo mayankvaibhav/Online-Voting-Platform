@@ -1,0 +1,66 @@
+.header {
+    background-color: rgb(44, 173, 130);
+    height: 50px;
+    border-radius: 30px;
+}
+
+.nav {
+    text-decoration: none;
+    display: flex;
+    justify-content: right;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-right: 40px;
+    padding: 15px;
+}
+
+.banner {
+    background-color: rgb(43, 156, 118);
+    height: 300px;
+    border-radius: 30px;
+    margin-top: 10px;
+
+}
+.nothing{
+    height: 1px;
+    width: 1px;
+}
+
+.adminDetailsContainer{
+    /* background-color: aqua; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.adminDetailsWrapper{
+    border: 2px solid black;
+    border-radius: 30px;
+}
+.adminDetails{
+    /* border: 2px solid black; */
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile{
+    height: 120px;
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.name{
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.profileName{
+    width: fit-content;
+}
+.contactDetailsContainer{
+    margin-top: 20px;
+    margin-left: 90px;
+}
+.contactDetailsContainer div{
+    margin-top: 3px;
+}

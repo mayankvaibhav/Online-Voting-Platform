@@ -1,0 +1,80 @@
+.landingBody {
+    margin: -8px;
+    height: 100vh;
+    background: linear-gradient(to bottom right,
+        #8697C4,
+        #ADBBDA,
+        #EDE8F5,
+        #EDE8F5,
+        white);
+}
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 100px;
+    width: 600px;
+}
+
+.contentTitle {
+    color: #1f347f;
+    font-size: 70px;
+}
+
+.contentText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: -20px;
+}
+.h1{
+    font-size: xx-large;
+    color: #1f347f;
+}
+
+.buttonContainer {
+    margin-top: 100px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 0.7em 1.8em;
+    color: white;
+    background: linear-gradient(0deg, #3D52A0 0%, #8697C4 50%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #7091E6;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #3D52A0;
+}
+
+.button:active {
+    box-shadow: 0 0.3em 1em -0.5em #3D52A0;
+}
+
+.imageContainer {
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 90px;
+    margin-left: 26rem;
+}
+
+.image {
+    height: 40rem;
+    width: fit-content;
+}
