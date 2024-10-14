@@ -9,11 +9,6 @@
     "env": {
       "API_URL": "https://online-voting-platform-n1wd.vercel.app"  
     },
-    "dev": {
-      "env": {
-        "API_URL": "http://localhost:8000" 
-      }
-    },
     "builds": [
       {
         "src": "frontend/package.json",
