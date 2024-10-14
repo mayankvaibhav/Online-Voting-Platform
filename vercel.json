@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "rewrites": [
+      {
+        "source": "/api/:path*",  
+        "destination": "https://online-voting-platform-n1wd.vercel.app/api/:path*"  
+      }
+    ],
+    "env": {
+      "API_URL": "https://online-voting-platform-n1wd.vercel.app"  
+    },
+    "dev": {
+      "env": {
+        "API_URL": "http://localhost:8000" 
+      }
+    },
+    "builds": [
+      {
+        "src": "frontend/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "frontend/build"
+        }
+      },
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ]
+  }
+  
