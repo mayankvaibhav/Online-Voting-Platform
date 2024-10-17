@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7a13044a.css",
+    "main.js": "/static/js/main.b1583c57.js",
+    "static/media/image.png": "/static/media/image.191484a019a28955e808.png",
+    "static/media/Colored Composition.png": "/static/media/Colored Composition.252a1b6dbde28a89c64f.png",
+    "static/media/Skater Girl.png": "/static/media/Skater Girl.da491eb6eb954e191d48.png",
+    "static/media/voteBanner.png": "/static/media/voteBanner.f974c23f20926e126636.png",
+    "index.html": "/index.html",
+    "main.7a13044a.css.map": "/static/css/main.7a13044a.css.map",
+    "main.b1583c57.js.map": "/static/js/main.b1583c57.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a13044a.css",
+    "static/js/main.b1583c57.js"
+  ]
+}
