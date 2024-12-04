@@ -32,7 +32,6 @@ const App = () => {
           <Route path="/home" element={<HomePage />} />
           <Route path="/home/admin" element={<Admin />} />
 
-
           <Route path="/home/admin/createElection" element={<ElectionCreation />} />
 
           <Route path="/home/admin/electionsByAdmin" element={<ElectionCreatedRegistered />} />

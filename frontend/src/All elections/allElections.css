@@ -11,7 +11,7 @@
     background-color:#3D52A0;
     color: white;
 }
-.website-content{
+.websiteContent{
     margin-left: 30px;
     height: 50px;
     font-size: x-large;
@@ -20,7 +20,7 @@
     align-items: center;
     width: fit-content;
 }
-.navigation-links{
+.navigationLinks{
     margin-right: 30px;
     height: 50px;
     font-size: x-large;
@@ -36,10 +36,7 @@
     border-radius: 20px;
 }
 
-
-
-
-.elections-list-container{
+.electionsListContainer{
     margin-top: 20px;
     border-radius: 20px;
     background-color: #ede8f5;
@@ -47,7 +44,7 @@
     height: fit-content;
     border: 2px solid black;
 }
-.election-box{
+.electionBox{
     box-shadow: 2px 2px 25px 2px gray;
     color: white;
     margin-left: 20px;
@@ -58,28 +55,24 @@
     border: 2px solid #3660c9;
 }
 
-
-
-.seperator-design{
+.seperatorDesign{
     margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.seperator-design-box{
+.seperatorDesignBox{
     border-radius: 10px;
     background-color: blue;
     height: 5px;
     width: 15rem;
 }
-.created-timer-container{
+.createdTimerContainer{
     margin-top: 5px;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
     /* border: 2px solid black; */
 }
-
-
 
 .PE{
     margin-bottom: 20px;
@@ -88,17 +81,13 @@
     margin-left: 25px;
 }
 
-
-
-
-
-.election-boxes-container{
+.electionBoxesContainer{
     margin-bottom: 20px;
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
 }
-.election-box-container{
+.electionBoxContainer{
     box-shadow: 2px 2px 25px 2px gray;
     background-color: #7091e6;
     color: white;
@@ -106,32 +95,35 @@
     width: fit-content;
     border-radius: 20px 20px 0px 0px;
 }
-.election-title-container{
+.electionTitleContainer{
     margin-top: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.election-title{
+.electionTitle{
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
     font-size: larger;
 }
-.candidate-vs-container{
+.candidateVsContainer{
     margin-top: 15px;
     display: flex;
     justify-content: space-around;
 }
 .candidate{
     border-radius: 25px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     border: 2px solid black;
     height: 10rem;
     width: 10rem;
+    background-size: cover; /* Cover the container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
 }
-.candidate-name{
+.candidateName{
     margin-top: 3px;
     display: flex;
     justify-content: center;
@@ -143,17 +135,17 @@
     height: 10rem;
     width: 7rem;
 }
-.vote-decision-container{
+.voteDecisionContainer{
     display: flex;
     border-radius: 10px;
     border: 2px solid #3660c9;
     justify-content: space-around;
 }
-.vote-count-container{
+.voteCountContainer{
     display: flex;
 }
-.vote-count{
-margin-left: 15px;
+.voteCount{
+    margin-left: 15px;
 }
 .seeBioContainer{
     margin-top: 5px;
@@ -170,16 +162,14 @@ margin-left: 15px;
     border-radius: 5px;
 }
 
-
-
-.seperator-design-box{
+.seperatorDesignBox{
     border-radius: 10px;
     background-color: blue;
     height: 5px;
     width: 15rem;
 }
 
-.created-by{
+.createdBy{
     display: flex;
     align-items: center;
 }

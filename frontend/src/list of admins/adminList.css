@@ -34,7 +34,10 @@
     justify-content: space-around;
 }
 .adminDetailsWrapper{
-    border: 2px solid black;
+    border: 2px solid rgb(0, 229, 255);
+    background-color: rgb(3, 3, 66);
+    color: white;
+
     border-radius: 30px;
 }
 .adminDetails{
@@ -47,16 +50,16 @@
 .profile{
     height: 120px;
     width: 120px;
-    border: 2px solid black;
+    border: 2px solid rgb(0, 229, 255);
     border-radius: 50%;
 }
 .name{
     margin-top: 5px;
-    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.profileName{
-    width: fit-content;
-}
+
 .contactDetailsContainer{
     margin-top: 20px;
     margin-left: 90px;

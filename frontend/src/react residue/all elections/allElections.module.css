@@ -42,7 +42,7 @@
     background-color: #ede8f5;
     color: #092690;
     height: fit-content;
-    border: 2px solid black;
+    border: 2px solid rgb(3,3,66);
 }
 .electionBox{
     box-shadow: 2px 2px 25px 2px gray;
@@ -52,7 +52,7 @@
     width: fit-content;
     margin-top: 20px;
     background-color: #7091e6;
-    border: 2px solid #3660c9;
+    border: 2px solid rgb(3,3,66);
 }
 
 .seperatorDesign{
@@ -61,12 +61,7 @@
     justify-content: center;
     align-items: center;
 }
-.seperatorDesignBox{
-    border-radius: 10px;
-    background-color: blue;
-    height: 5px;
-    width: 15rem;
-}
+
 .createdTimerContainer{
     margin-top: 5px;
     /* display: flex; */
@@ -89,10 +84,10 @@
 }
 .electionBoxContainer{
     box-shadow: 2px 2px 25px 2px gray;
-    background-color: #7091e6;
-    color: white;
-    border: 2px solid #3660c9;
-    width: fit-content;
+    /* background-color: rgb(3,3,66); */
+    color: rgb(3,3,66);
+    border: 2px solid rgb(0, 229, 255);
+    width: 30rem;
     border-radius: 20px 20px 0px 0px;
 }
 .electionTitleContainer{
@@ -154,11 +149,11 @@
     /* border: 2px solid black; */
 }
 .seeBioContainer button{
-    border: 2px solid rgb(7, 7, 94);
+    border: 1px solid rgb(0, 229, 255);
     height: fit-content;
     width: 20rem;
     color: white;
-    background-color: #3660c9;
+    background-color: rgb(3,3,66);
     border-radius: 5px;
 }
 
