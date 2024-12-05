@@ -20,7 +20,7 @@ const Register = () => {
 
         try {
             // Send POST request to backend with registration credentials
-            const response = await Axios.post('https://online-voting-platform-4iqo.onrender.com/users/register', {
+            const response = await Axios.post('http://localhost:8000/users/register', {
                 username,
                 email,
                 profile,

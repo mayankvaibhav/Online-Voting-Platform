@@ -15,9 +15,9 @@ const Login = () => {
 
     try {
       // Send POST request to backend with login credentials using Axios
-      const response = await Axios.post('https://online-voting-platform-4iqo.onrender.com/users/login', {
+      const response = await Axios.post('http://localhost:8000/users/login', {
         username,
-        password,
+        password,z
       });
 
       const data = response.data;
