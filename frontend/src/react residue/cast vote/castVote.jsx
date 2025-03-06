@@ -16,7 +16,7 @@ const CastVote = () => {
         const fetchElectionData = async () => {
             try {
                 // Fetch all elections
-                const electionResponse = await axios.get(`http://localhost:8000/elections/all`);
+                const electionResponse = await axios.get(`https://online-voting-platform-4iqo.onrender.com/elections/all`);
 
                 // Get current time
                 const currentTime = new Date();
@@ -35,7 +35,7 @@ const CastVote = () => {
                 // Fetch candidates for each filtered election
                 const electionsWithCandidates = await Promise.all(
                     filteredElections.map(async (election) => {
-                        const candidatesResponse = await axios.get(`http://localhost:8000/candidate/${election._id}`);
+                        const candidatesResponse = await axios.get(`https://online-voting-platform-4iqo.onrender.com/candidate/${election._id}`);
                         return { ...election, candidates: candidatesResponse.data || [] }; // Ensure candidates is an array
                     })
                 );
@@ -94,7 +94,7 @@ const CastVote = () => {
         };
 
         try {
-            const response = await axios.post('http://localhost:8000/votes/castVote', voteData, {
+            const response = await axios.post('https://online-voting-platform-4iqo.onrender.com/votes/castVote', voteData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ const CastVote = () => {
         <div>
             {/* Header */}
             <div className={castVoteStyle.header}>
-                <a className={castVoteStyle.nav}>HOME</a>
+                <a className={castVoteStyle.nav} href="/home">HOME</a>
             </div>
 
             {/* Banner */}

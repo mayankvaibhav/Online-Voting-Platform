@@ -53,7 +53,7 @@ const ElectionCreation = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:8000/elections/create', {
+            const response = await fetch('https://online-voting-platform-4iqo.onrender.com/elections/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -25,7 +25,7 @@ const ElectionCreatedRegistered = () => {
             console.log(userId)
 
             // Fetch the elections created by the user
-            const response = await fetch(`http://localhost:8000/elections/${userId}`, {
+            const response = await fetch(`https://online-voting-platform-4iqo.onrender.com/elections/${userId}`, {
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${token}`, // Include the token in the Authorization header
@@ -55,7 +55,7 @@ const ElectionCreatedRegistered = () => {
     const fetchCandidatesByElectionIds = async (electionIds) => {
         try {
             const promises = electionIds.map(async (electionId) => {
-                const response = await axios.get(`http://localhost:8000/candidate/${electionId}`);
+                const response = await axios.get(`https://online-voting-platform-4iqo.onrender.com/candidate/${electionId}`);
                 return { electionId, candidates: response.data };
             });
 

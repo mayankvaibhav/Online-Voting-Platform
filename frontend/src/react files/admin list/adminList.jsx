@@ -5,7 +5,7 @@ const AdminList = () => {
   return (
     <div className={adstyles.adminListBody}>
       <div className={adstyles.header}>
-        <a className={adstyles.nav} href="#">HOME</a>
+        <a className={adstyles.nav} href="/home">HOME</a>
       </div>
       <div className={adstyles.banner}></div>
       <div className={adstyles.adminDetailsContainer}>

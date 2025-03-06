@@ -51,7 +51,7 @@ const HomePage = () => {
 
       setLoading(true); // Set loading to true when the upload starts
       try {
-        const response = await axios.post('http://localhost:8000/cloudinary/upload', formData, {
+        const response = await axios.post('https://online-voting-platform-4iqo.onrender.com/cloudinary/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },

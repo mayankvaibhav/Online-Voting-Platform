@@ -8,7 +8,7 @@ const AllElections = () => {
     // Fetch all elections
     const fetchElections = async () => {
         try {
-            const res = await axios.get("http://localhost:8000/elections/all"); // Adjust the API endpoint if needed
+            const res = await axios.get("https://online-voting-platform-4iqo.onrender.com/elections/all"); // Adjust the API endpoint if needed
             setElections(res.data);
         } catch (error) {
             console.error("Error fetching elections", error);
@@ -38,7 +38,7 @@ const AllElections = () => {
                         <span>Online Voting Platform</span>
                     </div>
                     <div className={allElectionStyles.navigationLinks}>
-                        <a href="home">Home</a>
+                        <a href="/home">Home</a>
                     </div>
                 </div>
                 <div className={allElectionStyles.banners}></div>
@@ -67,7 +67,7 @@ const ElectionBox = ({ election }) => {
     // Fetch candidates by election ID
     const fetchCandidates = async (electionId) => {
         try {
-            const res = await axios.get(`http://localhost:8000/candidate/${electionId}`); // Adjust API endpoint
+            const res = await axios.get(`https://online-voting-platform-4iqo.onrender.com/candidate/${electionId}`); // Adjust API endpoint
             return res.data;
         } catch (error) {
             console.error("Error fetching candidates", error);
@@ -119,7 +119,7 @@ const ElectionBox = ({ election }) => {
                             <div className={allElectionStyles.candidate} style={{ backgroundImage: `url(${candidate.profile})` }}></div>
                             <div className={allElectionStyles.candidateName}>
                                 <span>{candidate.candidateName}</span>
-                                <span>{` (${candidate.nickname})`}</span>
+                                <span>{candidate.nickname? `(${candidate.nickname})` : ""}</span>
                             </div>
                             <div className={allElectionStyles.voteCount}>
                                 <span>{candidate.votesCount}</span>
@@ -127,25 +127,28 @@ const ElectionBox = ({ election }) => {
                         </div>
                     ))}
                 </div>
+                <div style={{ paddingLeft: "20px" }}>
+                    <div className={allElectionStyles.totalVotes}>
+                        <span>Total votes: {totalVotes}</span> {/* Display total votes */}
+                    </div>
 
-                <div className={allElectionStyles.totalVotes}>
-                    <span>Total votes: {totalVotes}</span> {/* Display total votes */}
-                </div>
-
-                <div className={allElectionStyles.totalActiveTime}>
-                    <span>Total active time: {totalActiveTime} hours</span> {/* Display total active time */}
+                    <div className={allElectionStyles.totalActiveTime}>
+                        <span>Total active time: {totalActiveTime} hours</span> {/* Display total active time */}
+                    </div>
                 </div>
 
                 <div className={allElectionStyles.seperatorDesign}>
                     <div className={allElectionStyles.seperatorDesignBox}></div>
                 </div>
-                <div className={allElectionStyles.createdTimerContainer}>
+
+                <div className={allElectionStyles.createdTimerContainer} style={{ paddingLeft: "20px" }}>
                     <div className={allElectionStyles.createdBy}>
                         <span>Created By: {election.createdBy}</span>
                     </div>
                     <div className={allElectionStyles.timer}>
                         <div>
-                            <span>Started at: {new Date(election.startTime).toLocaleString()} | Ended at: {new Date(election.endTime).toLocaleString()}</span>
+                            <span>Started at: {new Date(election.startTime).toLocaleString()}</span>
+                            <div>Ended at: {new Date(election.endTime).toLocaleString()}</div>
                         </div>
                     </div>
                 </div>

@@ -88,7 +88,7 @@
     color: rgb(3,3,66);
     border: 2px solid rgb(0, 229, 255);
     width: 30rem;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
 }
 .electionTitleContainer{
     margin-top: 5px;
@@ -146,6 +146,8 @@
     margin-top: 5px;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
     /* border: 2px solid black; */
 }
 .seeBioContainer button{

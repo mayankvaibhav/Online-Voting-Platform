@@ -35,7 +35,7 @@ const Admin = () => {
 
             try {
                 // Update the URL to point to your correct backend route
-                const response = await axios.post('http://localhost:8000/uploadImage/upload', formData, {
+                const response = await axios.post('https://online-voting-platform-4iqo.onrender.com/uploadImage/upload', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
                     },
@@ -56,16 +56,6 @@ const Admin = () => {
         }
     };
 
-
-
-
-
-
-
-
-
-
-
     const handleElectionIdChange = async (e) => {
         const id = e.target.value;
         setElectionId(id);
@@ -73,7 +63,7 @@ const Admin = () => {
 
         if (id) {
             try {
-                const response = await fetch(`http://localhost:8000/elections/${id}`); // Fetch election title by ID
+                const response = await fetch(`https://online-voting-platform-4iqo.onrender.com/elections/${id}`); // Fetch election title by ID
 
                 if (!response.ok) {
                     throw new Error('Election not found');
@@ -114,7 +104,7 @@ const Admin = () => {
         try {  
             setLoading(true); // Set loading to true before making the request
 
-            const response = await fetch('http://localhost:8000/candidate/create', {
+            const response = await fetch('https://online-voting-platform-4iqo.onrender.com/candidate/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -166,12 +156,7 @@ const Admin = () => {
         } finally {
             setLoading(false); // Set loading to false after request completion
         }
-
-
-
     };
-
-
 
     const handleRedirectElectionCreation = () => {
         navigate('/home/admin/createElection'); // Redirect to the register page
@@ -186,7 +171,7 @@ const Admin = () => {
         <div className={adminStyles.adminBody}>
             <div className={adminStyles.header}>
                 <nav className={adminStyles.nav}>
-                    <a className={adminStyles.a} href="#">HOME</a>
+                    <a className={adminStyles.a} href="/home">HOME</a>
                 </nav>
             </div>
             <div className={adminStyles.banner}></div>

@@ -5,14 +5,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './react files/login page/login.jsx';
 import LandingPage from './Landing_page.jsx';
 import Register from './react files/register page/register.jsx';
-import HomePage from './react files/home/home.jsx';
 import Admin from './react files/admin page/admin.jsx';
 import CastVote from "./react residue/cast vote/castVote.jsx"
 import ElectionCreation from './react residue/election creation/electioncreation.jsx';
 
 import ElectionCreatedRegistered from './react residue/elections by admin/electionsbyadmin.jsx';
 import AllElections from './react residue/all elections/allElections.jsx';
-
+import NewHomePage from './suraj/homepage.jsx';
 import AdminList from './react files/admin list/adminList.jsx';
 
 const App = () => {
@@ -27,9 +26,11 @@ const App = () => {
           {/* Route for the Register page */}
 
           <Route path="/" element={<LandingPage />} />
+
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/home" element={<NewHomePage />} />
+
           <Route path="/home/admin" element={<Admin />} />
 
           <Route path="/home/admin/createElection" element={<ElectionCreation />} />
