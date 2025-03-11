@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc4629ab.css",
-    "main.js": "/static/js/main.061c6328.js",
+    "main.css": "/static/css/main.19313baa.css",
+    "main.js": "/static/js/main.a2781fe5.js",
     "static/media/image.png": "/static/media/image.191484a019a28955e808.png",
     "static/media/identity.gif": "/static/media/identity.7ee480c0d000bd5a170e.gif",
     "static/media/badge.gif": "/static/media/badge.9d6c446e9a28c2bc6c2e.gif",
@@ -15,6 +15,7 @@
     "static/media/virtual-assistant.gif": "/static/media/virtual-assistant.fdb4714c72ed5ad7d6f5.gif",
     "static/media/Skater Girl.png": "/static/media/Skater Girl.da491eb6eb954e191d48.png",
     "static/media/tech-support.gif": "/static/media/tech-support.d9094f69ccdf2c733e1a.gif",
+    "static/media/vote banner.png": "/static/media/vote banner.2918fdc998b9841f8890.png",
     "static/media/virtual-assistant.png": "/static/media/virtual-assistant.0cea99a1947500acff24.png",
     "static/media/info.png": "/static/media/info.0c4fff4ba5ed878984da.png",
     "static/media/growth.png": "/static/media/growth.463792d3dc91042b25bb.png",
@@ -26,11 +27,11 @@
     "static/media/bar-graph.png": "/static/media/bar-graph.7b864378f6452285ae2b.png",
     "static/media/voting.png": "/static/media/voting.9122ce54dff6901e5369.png",
     "index.html": "/index.html",
-    "main.cc4629ab.css.map": "/static/css/main.cc4629ab.css.map",
-    "main.061c6328.js.map": "/static/js/main.061c6328.js.map"
+    "main.19313baa.css.map": "/static/css/main.19313baa.css.map",
+    "main.a2781fe5.js.map": "/static/js/main.a2781fe5.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc4629ab.css",
-    "static/js/main.061c6328.js"
+    "static/css/main.19313baa.css",
+    "static/js/main.a2781fe5.js"
   ]
 }
