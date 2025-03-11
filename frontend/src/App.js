@@ -13,6 +13,7 @@ import ElectionCreatedRegistered from './react residue/elections by admin/electi
 import AllElections from './react residue/all elections/allElections.jsx';
 import NewHomePage from './suraj/homepage.jsx';
 import AdminList from './react files/admin list/adminList.jsx';
+import AboutUs from './react files/aboutUs.jsx';
 
 const App = () => {
   return (
@@ -40,6 +41,8 @@ const App = () => {
           <Route path="/home/castVote" element={<CastVote />} />
           <Route path="/home/allElections" element={<AllElections />} />
           <Route path="/home/adminList" element={<AdminList />} />
+          <Route path="/home/AboutUs" element={<AboutUs />} />
+
 
 
 

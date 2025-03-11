@@ -1,66 +1,73 @@
-.header {
-    background-color: rgb(44, 173, 130);
-    height: 50px;
-    border-radius: 30px;
-}
-
-.nav {
-    text-decoration: none;
-    display: flex;
-    justify-content: right;
-    font-family: sans-serif;
-    color: white;
-    font-weight: bold;
-    margin-right: 40px;
-    padding: 15px;
-}
-
-.banner {
-    background-color: rgb(43, 156, 118);
-    height: 300px;
-    border-radius: 30px;
-    margin-top: 10px;
-
-}
-.nothing{
-    height: 1px;
-    width: 1px;
-}
-
-.adminDetailsContainer{
-    /* background-color: aqua; */
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
-}
-.adminDetailsWrapper{
-    border: 2px solid black;
-    border-radius: 30px;
-}
-.adminDetails{
-    /* border: 2px solid black; */
-    margin: 20px;
+:root {
+    --primary-color: #3a86ff;
+    --background: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --border-radius: 12px;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--background);
+    border-radius: var(--border-radius);
+  }
+  
+  .header {
     display: flex;
     justify-content: space-between;
-}
-
-.profile{
-    height: 120px;
-    width: 120px;
-    border: 2px solid black;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: var(--text-color);
+  }
+  
+  .nav {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .adminList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .adminCard {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  
+  .profile {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
     border-radius: 50%;
-}
-.name{
-    margin-top: 5px;
-    margin-left: 15px;
-}
-.profileName{
-    width: fit-content;
-}
-.contactDetailsContainer{
-    margin-top: 20px;
-    margin-left: 90px;
-}
-.contactDetailsContainer div{
-    margin-top: 3px;
-}
+    margin: 0 auto 10px;
+  }
+  
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .contact {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  

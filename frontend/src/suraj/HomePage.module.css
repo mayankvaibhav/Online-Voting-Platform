@@ -6,14 +6,27 @@ body{
     position: relative;
     /* display: inline-block; */
 }
+.banner{
+    background-image: url("./vote\ banner.png");
+    /* padding-top: 50px; */
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .header{
-    box-shadow: 4px 7px 9px;
-    background-color: rgb(23, 21, 166);
+    background-color: rgba(23, 21, 166, 0.274);
+    backdrop-filter: blur(10px);
     height: 60px;
     display: flex;
+    position: fixed;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
+    margin-left: 145px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(5, 0, 255, 0.296);
 }
 .menu{
     margin-right: 50px;
@@ -52,19 +65,21 @@ body{
 }
 
 .navigationLinks{
-    margin-top: 30rem;
+    margin-top: 20px;
     margin-left: 7rem;
 }
 .box1{
     display: flex;
     width: 80rem;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .box2{
     margin-top: 20px;
     display: flex;
-    width: 80rem;
-    justify-content: space-between;
+    width: 68rem;
+    /* background-color: red; */
+    margin-left: 90px;
+    justify-content: space-around;
     
 }
 .size{

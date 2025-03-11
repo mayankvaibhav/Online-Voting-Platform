@@ -86,7 +86,7 @@ const Admin = () => {
         setError('');
         setSuccess('');
 
-        
+
 
         // Prepare the candidate data, ensuring 'nickname' is only added if provided
         const candidateData = {
@@ -101,7 +101,7 @@ const Admin = () => {
             candidateData.nickname = profile;
         }
 
-        try {  
+        try {
             setLoading(true); // Set loading to true before making the request
 
             const response = await fetch('https://online-voting-platform-4iqo.onrender.com/candidate/create', {
@@ -170,15 +170,17 @@ const Admin = () => {
     return (
         <div className={adminStyles.adminBody}>
             <div className={adminStyles.header}>
+                <div className={adminStyles.websiteTitle}>Online Voting Platform</div>
+
                 <nav className={adminStyles.nav}>
                     <a className={adminStyles.a} href="/home">HOME</a>
                 </nav>
             </div>
-            <div className={adminStyles.banner}></div>
+            {/* <div className={adminStyles.banner}></div> */}
             <div className={adminStyles.creation}>
                 <button className={adminStyles.candidateCreation}>Candidate Creation</button>
                 <button className={adminStyles.electionCreation} onClick={handleRedirectElectionCreation}>Election Creation</button>
-                <button className={adminStyles.electionDetail} onClick={handleRedirectElectionDetails}>Election Detail</button>
+                {/* <button className={adminStyles.electionDetail} onClick={handleRedirectElectionDetails}>Election Detail</button> */}
             </div>
             <span className={adminStyles.candidateTitle}>
                 <h1>Create Candidate</h1>

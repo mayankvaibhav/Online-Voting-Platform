@@ -83,6 +83,9 @@ const NewHomePage = () => {
     const handleRedirectAdminList = () => {
         navigate('/home/adminList');
     };
+    const aboutus = () => {
+        navigate('/home/AboutUs')
+    }
 
     const handleToggleProfile = () => {
         setShowProfile((prev) => !prev); // Toggle visibility
@@ -121,21 +124,35 @@ const NewHomePage = () => {
                         </div>
                     </div>
                 )}
+
+            </div>
+            <div className={styles.banner}>
+                <div style={{ height: "1px" }}></div>
+                <div style={{marginTop: "350px",paddingLeft:"190px", paddingRight:"190px"  }}>
+                    <div style={{backgroundColor: "rgba(255,255,255, 0.01)",backdropFilter:`blur(5px)`,border:`2px solid rgba(255, 255, 255, 0.11)`,paddingTop:"30px", paddingBottom:'30px', borderRadius:"50px"}}>
+                        <div style={{ justifyContent: "center", alignItems: "center", display: "flex", fontSize: "40px", fontWeight: "bold", color: "rgb(112, 217, 255)" }}>Empowering Democracy, One Click at a Time</div>
+                        <div style={{ marginTop: "10px", justifyContent: "center", alignItems: "center", display: "flex", fontSize: "60px", fontWeight: "bold", color: "rgb(112, 217, 255)" }}>Cast Your Vote</div>
+                        <div style={{ marginTop: "10px",  justifyContent: "center", alignItems: "center", display: "flex", fontSize: "80px", fontWeight: "bold", color: "rgb(215, 246, 255)" }}>Securely and Seamlessly!</div>
+                    </div>
+                </div>
             </div>
             <div className={styles.navigationLinks}>
                 <div className={styles.box1}>
-                    {renderNavigationItem("allElection", "All Elections",handleRedirectAllElections)}
-                    {renderNavigationItem("castVote", "Cast Vote",handleRedirectCastVote)}
-                    {renderNavigationItem("latestResult", "Latest Result")}
-                    {renderNavigationItem("beCandidate", "Be A Candidate")}
-                    {renderNavigationItem("contactAdministrator", "Contact Administrator")}
+                    {renderNavigationItem("allElection", "All Elections", handleRedirectAllElections)}
+                    {renderNavigationItem("castVote", "Cast Vote", handleRedirectCastVote)}
+                    {renderNavigationItem("adminsList", "Admins List", handleRedirectAdminList)}
+                    {renderNavigationItem("aboutUs", "About Us", aboutus)}
+                    {role === "admin" && renderNavigationItem("adminSpecial", "Admin Special", handleRedirectAdminSpecial)}
+
+
+
+                    {/* {renderNavigationItem("latestResult", "Latest Result")} */}
+                    {/* {renderNavigationItem("beCandidate", "Be A Candidate")} */}
+                    {/* {renderNavigationItem("contactAdministrator", "Contact Administrator")} */}
                 </div>
                 <div className={styles.box2}>
-                    {renderNavigationItem("electionsYouVoted", "Elections You Have Voted In")}
-                    {renderNavigationItem("adminsList", "Admins List",handleRedirectAdminList)}
-                    {role === "Admin" && renderNavigationItem("adminSpecial", "Admin Special", handleRedirectAdminSpecial)}
-                    {renderNavigationItem("aboutUs", "About Us")}
-                    {renderNavigationItem("moreInfo", "More Info")}
+                    {/* {renderNavigationItem("electionsYouVoted", "Elections You Have Voted In")} */}
+                    {/* {renderNavigationItem("moreInfo", "More Info")} */}
                 </div>
             </div>
         </div>

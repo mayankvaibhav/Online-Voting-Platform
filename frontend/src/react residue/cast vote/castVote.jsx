@@ -119,14 +119,15 @@ const CastVote = () => {
         <div>
             {/* Header */}
             <div className={castVoteStyle.header}>
+                <div className={castVoteStyle.websiteTitle}>Online Voting Platform</div>
                 <a className={castVoteStyle.nav} href="/home">HOME</a>
             </div>
 
             {/* Banner */}
-            <div className={castVoteStyle.banner}></div>
+            {/* <div className={castVoteStyle.banner}></div> */}
 
             <span className={castVoteStyle.voterTitle}>
-                <h1>Choose Future</h1>
+                <div><h1>Choose Future Cast Your Vote</h1></div>
             </span>
 
             {elections.map((election) => (

@@ -15,14 +15,16 @@ const AllElections = () => {
         }
     };
 
-    console.log(elections)
-
     useEffect(() => {
         fetchElections();
     }, []);
 
-    // Group elections into chunks of three and sort latest first
-    const groupedElections = elections
+    // Filter out past elections (whose endTime is before the current date)
+    const currentDate = new Date();
+    const pastElections = elections.filter(election => new Date(election.endTime) < currentDate);
+
+    // Group past elections into chunks of three and sort latest first
+    const groupedElections = pastElections
         .sort((a, b) => new Date(b.startTime) - new Date(a.startTime)) // Sort by start time, latest first
         .reduce((acc, election, index) => {
             if (index % 3 === 0) acc.push([]);
@@ -41,7 +43,7 @@ const AllElections = () => {
                         <a href="/home">Home</a>
                     </div>
                 </div>
-                <div className={allElectionStyles.banners}></div>
+                
                 <div className={allElectionStyles.electionsListContainer}>
                     <div className={allElectionStyles.PE}>Past Elections</div>
 
@@ -92,13 +94,11 @@ const ElectionBox = ({ election }) => {
             const fetchedCandidates = await fetchCandidates(election._id);
             if (fetchedCandidates) {
                 setCandidates(fetchedCandidates);
-                const totalVotes = calculateTotalVotes(fetchedCandidates);
-                setTotalVotes(totalVotes);  // Set the total votes
+                setTotalVotes(calculateTotalVotes(fetchedCandidates));  // Set the total votes
             }
 
             // Calculate total active time and set state
-            const activeTime = calculateActiveTime(election.startTime, election.endTime);
-            setTotalActiveTime(activeTime);
+            setTotalActiveTime(calculateActiveTime(election.startTime, election.endTime));
         };
 
         fetchAndSetCandidates();
@@ -118,22 +118,23 @@ const ElectionBox = ({ election }) => {
                         <div className={allElectionStyles.candidateContainer} key={candidate._id}>
                             <div className={allElectionStyles.candidate} style={{ backgroundImage: `url(${candidate.profile})` }}></div>
                             <div className={allElectionStyles.candidateName}>
-                                <span>{candidate.candidateName}</span>
-                                <span>{candidate.nickname? `(${candidate.nickname})` : ""}</span>
+                                <span style={{ color: "white" }}>{candidate.candidateName}</span>
+                                <span style={{ color: "white" }}>{candidate.nickname ? `(${candidate.nickname})` : ""}</span>
                             </div>
                             <div className={allElectionStyles.voteCount}>
-                                <span>{candidate.votesCount}</span>
+                                <span style={{ color: "white" }}>{candidate.votesCount}</span>
                             </div>
                         </div>
                     ))}
                 </div>
+                
                 <div style={{ paddingLeft: "20px" }}>
                     <div className={allElectionStyles.totalVotes}>
-                        <span>Total votes: {totalVotes}</span> {/* Display total votes */}
+                        <span style={{ color: "white" }}>Total votes: {totalVotes}</span> {/* Display total votes */}
                     </div>
 
                     <div className={allElectionStyles.totalActiveTime}>
-                        <span>Total active time: {totalActiveTime} hours</span> {/* Display total active time */}
+                        <span style={{ color: "white" }}>Total active time: {totalActiveTime} hours</span> {/* Display total active time */}
                     </div>
                 </div>
 
@@ -143,19 +144,16 @@ const ElectionBox = ({ election }) => {
 
                 <div className={allElectionStyles.createdTimerContainer} style={{ paddingLeft: "20px" }}>
                     <div className={allElectionStyles.createdBy}>
-                        <span>Created By: {election.createdBy}</span>
+                        <span style={{ color: "white" }}>Created By: {election.createdBy}</span>
                     </div>
                     <div className={allElectionStyles.timer}>
                         <div>
-                            <span>Started at: {new Date(election.startTime).toLocaleString()}</span>
-                            <div>Ended at: {new Date(election.endTime).toLocaleString()}</div>
+                            <span style={{ color: "white" }}>Started at: {new Date(election.startTime).toLocaleString()}</span>
+                            <div style={{ color: "white" }}>Ended at: {new Date(election.endTime).toLocaleString()}</div>
                         </div>
                     </div>
                 </div>
                 <div className={allElectionStyles.seeBioContainer}>
-                    <div className={allElectionStyles.seeDescription}>
-                        <button>See Full Description of Election</button>
-                    </div>
                 </div>
             </div>
         </div>
